@@ -4,6 +4,7 @@
     font-family: 'Titillium Web', sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar{
@@ -21,18 +22,30 @@
 }
 
 body {
-    background: #151313;
+    background: #000A32;
     color: #e6d9d9;
+}
+
+p {
+    color: #e6d9d9; text-shadow: black 0.1rem  0.1rem  0.2rem;
+}
+
+.background {
+    background-image: url(/assets/imagens/jatq18.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 nav {
     padding: 1rem;
     display: flex;
     justify-content: center;
-    background-color:#52001B ;
+    background-color:#021C43 ;
     margin: 16px;
-    border: 3px outset #FF0054 ;
-    border-radius: 10px 80px;
+    border: 3px outset #20C6E4 ;
+    border-radius: 20px;
 }
 
 nav ul{
@@ -44,7 +57,7 @@ nav ul{
 
 nav a{
     background-image:
-    linear-gradient(to right, #bc4e9c, #f80759);
+    linear-gradient(to right, #20C6E4, #f80759);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -53,9 +66,9 @@ nav a{
 }
 
 nav a:hover{
-    color: #ff2970;
+    color: #654FAC;
     text-decoration: underline;
-    transition: .5s ease-in-out;
+    transition: .8s ease-in-out;
 }
 
 #sobreMim, #meuVideo {
@@ -96,6 +109,20 @@ h2{
     border: 3px groove #ff2970;
 }
 
+.top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #20C6E4;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.top:hover {
+    background-color: #654FAC;
+    cursor: pointer;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -124,6 +151,7 @@ h2 {
 .form form {
     width: 70%;
     margin: 0 auto;
+    color: #e6d9d9; text-shadow: black 0.1rem  0.1rem  0.2rem;
 }
 
 label {
@@ -147,8 +175,15 @@ button {
   background-color: #FF0054;
   border: 2px groove #e6d9d9;
   border-radius: 8px;
-  color: #fcfcfc;
+  color: #fcfcfc; text-shadow: black 0.1rem  0.1rem  0.2rem;
   text-transform: uppercase;
+}
+
+#mapa {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    transition: .5s;
 }
 
 button:hover {
@@ -164,6 +199,12 @@ button:hover {
 
 .texto {
     width: 80vw;
+}
+
+.top{
+    display: flex;
+    width: 10vw;
+    height: 10vw;
 }
 
 .video {
