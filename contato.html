@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
-<body>
+<body class="background">
     <nav>
         <ul>
             <li>
@@ -16,6 +16,9 @@
             </li>
             <li>
                 <a href="contato.html">Contato</a>
+            </li>
+            <li>
+                <a href="portifolio.html">Portifólio</a>
             </li>
         </ul>
     </nav>
@@ -25,15 +28,19 @@
                 <h2>Entre em contato comigo</h2>
                 <form>
                     <label for="nome">Nome:</label> <br />
-                    <input type="text" id="nome" />
+                    <input type="text" id="nome" onkeyup='validaNome()'>
+                    <div id="txtNome"></div>
                    
                     <label for="email">Email:</label> <br />
-                    <input type="email" id="email" />
+                    <input type="email" id="email" onkeyup="validaEmail()">
+                    <div id="txtEmail"></div>
                     
                     <label for="assunto">Assunto:</label> <br />
-                    <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+                    <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                    <div id='contador'></div>
+                    <div id="txtAssunto"></div>
                    
-                    <button type="submit">Enviar</button>
+                    <button type="submit" onclick="enviar()">Enviar</button>
                 </form>
             </section> 
         
@@ -43,12 +50,13 @@
             <p>São Bernardo do Campo</p>
             
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50108.59813604259!2d-46.57216117749612!3d-23.700242834926055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce3fc6927dd0c3%3A0xcdcd0d550f9656cf!2sS%C3%A3o%20Bernardo%20do%20Campo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1644434827284!5m2!1spt-BR!2sbr"
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.146422047201!2d-46.579712915417886!3d-23.742157443728832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce413e8998d217%3A0x74bc675ab8eac832!2sS%C3%A3o%20Bernardo%20Do%20Campo!5e0!3m2!1spt-BR!2sbr!4v1644597366069!5m2!1spt-BR!2sbr" 
+                style="border:0;"
+                allowfullscreen=""
                 loading="lazy"
+                onmousemove="mapaZoom()"
+                onmouseout="mapaNormal()"
+                id="mapa"
                 ></iframe>
         </section>
         
@@ -57,6 +65,8 @@
     <footer>
         <p>Feito com amo - Guilherme Rodrigues - 2022 ❤ </p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
